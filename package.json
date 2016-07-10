@@ -1,6 +1,6 @@
 {
   "name": "feliz.util",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Various (standalone) utilities for feliz.js projects",
   "main": "lib/index.js",
   "author": "Héctor Menéndez <etor@gik.mx>",
@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "feliz.error": "0.0.1",
+    "feliz.error": "0.0.2",
     "lodash.merge": "^4.4.0",
     "rxjs": "^5.0.0-beta.10"
   }
