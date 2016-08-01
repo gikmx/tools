@@ -4,5 +4,5 @@ node_js:
 env:
 - NODE_ENV=production
 before_script: npm i istanbul tape coveralls
-script: npm run coverage-pre
-after_script: npm run coverage-post
+script: npm run cover:stats
+after_script: npm run cover:send

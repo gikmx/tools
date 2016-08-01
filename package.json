@@ -25,11 +25,12 @@
   "scripts": {
     "start": "npm-watch",
     "docs": "jsdoc2md -t ./template.hbs -d 1 'lib/**/*.js' > README.md",
-    "test": "tape ./test/**/*.js | tap-diff",
-    "coverage-pre": "istanbul cover --print detail tape ./test/**/*.js",
-    "coverage-post": "cat ./coverage/lcov.info | coveralls && rm -Rf coverage",
-    "coverage": "npm run coverage-pre && npm run coverage-post",
-    "precommit": "npm run docs && git add --force ./README.md && feliz.hooks pre-commit"
+    "test": "tape ./test/**/*.js | tap-spec",
+    "cover": "npm run cover:stats && npm run cover:send",
+    "cover:check": "npm run cover:stats && istanbul check-coverage",
+    "cover:stats": "istanbul cover tape -- ./test/**/*.js",
+    "cover:send": "cat ./coverage/lcov.info | coveralls",
+    "precommit": "npm test && npm run cover:check && npm run docs && git add --force ./README.md && feliz.hooks pre-commit"
   },
   "dependencies": {
     "feliz.error": "0.0.3",
@@ -43,7 +44,7 @@
     "istanbul": "^0.4.4",
     "jsdoc-to-markdown": "^1.3.6",
     "npm-watch": "^0.1.5",
-    "tap-diff": "^0.1.1",
+    "tap-spec": "^4.1.1",
     "tape": "^4.6.0"
   },
   "watch": {
