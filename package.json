@@ -19,8 +19,17 @@
   "bugs": {
     "url": "https://github.com/gikmx/feliz.util/issues"
   },
+  "engines":{
+    "node": ">=6.2.0"
+  },
   "scripts": {
-    "precommit": "./node_modules/.bin/feliz.hooks pre-commit"
+    "start": "npm-watch",
+    "docs": "jsdoc2md -t ./template.hbs 'lib/**/*.js' > README.md",
+    "test": "tape ./test/**/*.js | tap-diff",
+    "coverage-pre": "istanbul cover --display details tape ./test/**/*.js",
+    "coverage-post": "cat ./coverage/lcov.info | coveralls && rm -Rf coverage",
+    "coverage":"npm run coverage-pre && npm run coverage-post",
+    "precommit": "npm test && npm run docs && git add ./README.md && feliz.hooks pre-commit"
   },
   "dependencies": {
     "feliz.error": "0.0.2",
@@ -29,6 +38,28 @@
   },
   "devDependencies": {
     "feliz.hooks": "0.0.4",
-    "husky": "^0.11.6"
+    "husky": "^0.11.6",
+    "jsdoc-to-markdown": "^1.3.6",
+    "npm-watch": "^0.1.5",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.6.0"
+  },
+  "watch": {
+    "test": {
+      "patterns": [
+        "lib",
+        "test"
+      ],
+      "extensions": "js",
+      "quiet": true
+    },
+    "docs": {
+      "patterns": [
+        "lib",
+        "template.hbs"
+      ],
+      "extensions": "js",
+      "quiet": true
+    }
   }
 }
