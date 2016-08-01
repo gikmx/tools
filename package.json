@@ -24,12 +24,12 @@
   },
   "scripts": {
     "start": "npm-watch",
-    "docs": "jsdoc2md -t ./template.hbs 'lib/**/*.js' > README.md",
+    "docs": "jsdoc2md -t ./template.hbs --separators -d 1 'lib/**/*.js' > README.md",
     "test": "tape ./test/**/*.js | tap-diff",
     "coverage-pre": "istanbul cover --display details tape ./test/**/*.js",
     "coverage-post": "cat ./coverage/lcov.info | coveralls && rm -Rf coverage",
     "coverage":"npm run coverage-pre && npm run coverage-post",
-    "precommit": "npm test && npm run docs && git add ./README.md && feliz.hooks pre-commit"
+    "precommit": "npm run docs && git add --force ./README.md && feliz.hooks pre-commit"
   },
   "dependencies": {
     "feliz.error": "0.0.2",
