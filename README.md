@@ -23,6 +23,9 @@ Various utilities ready to use for any project, but if you use
     * [.object(target)](#module_util.object) ⇒ <code>[actions](#module_util.object..actions)</code>
         * [~actions](#module_util.object..actions)
             * [.merge(...reference)](#module_util.object..actions+merge) ⇒ <code>object</code>
+    * [.string(target)](#module_util.string) ⇒ <code>[actions](#module_util.string..actions)</code>
+        * [~actions](#module_util.string..actions)
+            * [.toTemplate(context)](#module_util.string..actions+toTemplate)
 
 <a name="module_util.is"></a>
 
@@ -166,6 +169,54 @@ Recursively merge reference(s) with target.
 | --- | --- | --- |
 | ...reference | <code>object</code> | Objects to be merged with target. |
 
+<a name="module_util.string"></a>
+
+## util.string(target) ⇒ <code>[actions](#module_util.string..actions)</code>
+String utilities for feliz.util
+
+**Kind**: static method of <code>[util](#module_util)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| target | <code>string</code> | The string to target. |
+
+**Example**  
+```js
+const str = require('feliz.util/string');
+const ops = str('hello world');
+// returns object with actions for target string
+```
+
+* [.string(target)](#module_util.string) ⇒ <code>[actions](#module_util.string..actions)</code>
+    * [~actions](#module_util.string..actions)
+        * [.toTemplate(context)](#module_util.string..actions+toTemplate)
+
+<a name="module_util.string..actions"></a>
+
+### string~actions
+Actions to be applied to given string target.
+
+**Kind**: inner class of <code>[string](#module_util.string)</code>  
+
+* [~actions](#module_util.string..actions)
+    * [.toTemplate(context)](#module_util.string..actions+toTemplate)
+
+<a name="module_util.string..actions+toTemplate"></a>
+
+#### actions.toTemplate(context)
+Allows given string to be converted according to a context.
+
+**Kind**: instance method of <code>[actions](#module_util.string..actions)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| context | <code>object</code> | The object defining the context to resolve. |
+
+**Example**  
+```js
+const str = require('feliz.util/string');
+const foo = str('Hello ${name}').toTemplate({name:'Bar'}); // Hello Bar
+```
 
 ## License
 The MIT License (MIT)
