@@ -1,6 +1,6 @@
 {
   "name": "feliz.util",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Various (standalone) utilities for feliz.js projects",
   "main": "lib/index.js",
   "author": "Héctor Menéndez <etor@gik.mx>",
