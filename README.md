@@ -25,7 +25,7 @@ Various utilities ready to use for any project, but if you use
             * [.merge(...reference)](#module_util.object..actions+merge) ⇒ <code>object</code>
     * [.string(target)](#module_util.string) ⇒ <code>[actions](#module_util.string..actions)</code>
         * [~actions](#module_util.string..actions)
-            * [.toTemplate(context)](#module_util.string..actions+toTemplate)
+            * [.template(context)](#module_util.string..actions+template)
 
 <a name="module_util.is"></a>
 
@@ -189,7 +189,7 @@ const ops = str('hello world');
 
 * [.string(target)](#module_util.string) ⇒ <code>[actions](#module_util.string..actions)</code>
     * [~actions](#module_util.string..actions)
-        * [.toTemplate(context)](#module_util.string..actions+toTemplate)
+        * [.template(context)](#module_util.string..actions+template)
 
 <a name="module_util.string..actions"></a>
 
@@ -199,11 +199,11 @@ Actions to be applied to given string target.
 **Kind**: inner class of <code>[string](#module_util.string)</code>  
 
 * [~actions](#module_util.string..actions)
-    * [.toTemplate(context)](#module_util.string..actions+toTemplate)
+    * [.template(context)](#module_util.string..actions+template)
 
-<a name="module_util.string..actions+toTemplate"></a>
+<a name="module_util.string..actions+template"></a>
 
-#### actions.toTemplate(context)
+#### actions.template(context)
 Allows given string to be converted according to a context.
 
 **Kind**: instance method of <code>[actions](#module_util.string..actions)</code>  
@@ -215,7 +215,7 @@ Allows given string to be converted according to a context.
 **Example**  
 ```js
 const str = require('feliz.util/string');
-const foo = str('Hello ${name}').toTemplate({name:'Bar'}); // Hello Bar
+const foo = str('Hello ${name}').template({name:'Bar'}); // Hello Bar
 ```
 
 ## License
