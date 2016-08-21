@@ -22,6 +22,7 @@ Various utilities ready to use for any project, but if you use
             * [.undefined()](#module_util.is..checkers+undefined) ⇒ <code>boolean</code>
             * [.arrayish()](#module_util.is..checkers+arrayish) ⇒ <code>boolean</code>
             * [.objectish()](#module_util.is..checkers+objectish) ⇒ <code>boolean</code>
+            * [.feliz()](#module_util.is..checkers+feliz) ⇒ <code>boolean</code>
     * [.object(target)](#module_util.object) ⇒ <code>[actions](#module_util.object..actions)</code>
         * [~actions](#module_util.object..actions)
             * [.merge(...reference)](#module_util.object..actions+merge) ⇒ <code>object</code>
@@ -61,6 +62,7 @@ if (is(str).string()) console.log(str); // will log 'hello world'
         * [.undefined()](#module_util.is..checkers+undefined) ⇒ <code>boolean</code>
         * [.arrayish()](#module_util.is..checkers+arrayish) ⇒ <code>boolean</code>
         * [.objectish()](#module_util.is..checkers+objectish) ⇒ <code>boolean</code>
+        * [.feliz()](#module_util.is..checkers+feliz) ⇒ <code>boolean</code>
 
 <a name="module_util.is..checkers"></a>
 
@@ -81,6 +83,7 @@ Available type-checkers for given target.
     * [.undefined()](#module_util.is..checkers+undefined) ⇒ <code>boolean</code>
     * [.arrayish()](#module_util.is..checkers+arrayish) ⇒ <code>boolean</code>
     * [.objectish()](#module_util.is..checkers+objectish) ⇒ <code>boolean</code>
+    * [.feliz()](#module_util.is..checkers+feliz) ⇒ <code>boolean</code>
 
 <a name="module_util.is..checkers+object"></a>
 
@@ -171,6 +174,12 @@ console.log(is(ex1).object(), is(ex2).object(), is(ex3).object())
 // prints: true true true
 console.log(is(ex1).objectish(), is(ex2).objectish(), is(ex3).objectish())
 ```
+<a name="module_util.is..checkers+feliz"></a>
+
+#### checkers.feliz() ⇒ <code>boolean</code>
+A feliz instance.
+
+**Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 <a name="module_util.object"></a>
 
 ## util.object(target) ⇒ <code>[actions](#module_util.object..actions)</code>
