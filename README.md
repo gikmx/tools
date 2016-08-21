@@ -32,7 +32,7 @@ Various utilities ready to use for any project, but if you use
 
 <a name="module_util.is"></a>
 
-## util.is(target) ⇒ <code>[checkers](#module_util.is..checkers)</code>
+### util.is(target) ⇒ <code>[checkers](#module_util.is..checkers)</code>
 Type checker for feliz.util
 
 **Kind**: static method of <code>[util](#module_util)</code>  
@@ -66,7 +66,7 @@ if (is(str).string()) console.log(str); // will log 'hello world'
 
 <a name="module_util.is..checkers"></a>
 
-### is~checkers
+#### is~checkers
 Available type-checkers for given target.
 
 **Kind**: inner class of <code>[is](#module_util.is)</code>  
@@ -87,7 +87,7 @@ Available type-checkers for given target.
 
 <a name="module_util.is..checkers+object"></a>
 
-#### checkers.object() ⇒ <code>boolean</code>
+##### checkers.object() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 **Example**  
 ```js
@@ -97,7 +97,7 @@ is(new String()).object() // true
 ```
 <a name="module_util.is..checkers+string"></a>
 
-#### checkers.string() ⇒ <code>boolean</code>
+##### checkers.string() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 **Example**  
 ```js
@@ -108,7 +108,7 @@ is(new String('hola')).string() // true
 ```
 <a name="module_util.is..checkers+array"></a>
 
-#### checkers.array() ⇒ <code>boolean</code>
+##### checkers.array() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 **Example**  
 ```js
@@ -118,31 +118,31 @@ is(new Array()).array() // true
 ```
 <a name="module_util.is..checkers+number"></a>
 
-#### checkers.number() ⇒ <code>boolean</code>
+##### checkers.number() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 <a name="module_util.is..checkers+date"></a>
 
-#### checkers.date() ⇒ <code>boolean</code>
+##### checkers.date() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 <a name="module_util.is..checkers+regex"></a>
 
-#### checkers.regex() ⇒ <code>boolean</code>
+##### checkers.regex() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 <a name="module_util.is..checkers+function"></a>
 
-#### checkers.function() ⇒ <code>boolean</code>
+##### checkers.function() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 <a name="module_util.is..checkers+null"></a>
 
-#### checkers.null() ⇒ <code>boolean</code>
+##### checkers.null() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 <a name="module_util.is..checkers+undefined"></a>
 
-#### checkers.undefined() ⇒ <code>boolean</code>
+##### checkers.undefined() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 <a name="module_util.is..checkers+arrayish"></a>
 
-#### checkers.arrayish() ⇒ <code>boolean</code>
+##### checkers.arrayish() ⇒ <code>boolean</code>
 An array, but not strictly an array.
 
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
@@ -159,7 +159,7 @@ console.log(is(ex1).arrayish(), is(ex2).arrayish(), is(ex3).arrayish())
 ```
 <a name="module_util.is..checkers+objectish"></a>
 
-#### checkers.objectish() ⇒ <code>boolean</code>
+##### checkers.objectish() ⇒ <code>boolean</code>
 An object, but not strictly an object.
 
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
@@ -176,13 +176,13 @@ console.log(is(ex1).objectish(), is(ex2).objectish(), is(ex3).objectish())
 ```
 <a name="module_util.is..checkers+feliz"></a>
 
-#### checkers.feliz() ⇒ <code>boolean</code>
+##### checkers.feliz() ⇒ <code>boolean</code>
 A feliz instance.
 
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
 <a name="module_util.object"></a>
 
-## util.object(target) ⇒ <code>[actions](#module_util.object..actions)</code>
+### util.object(target) ⇒ <code>[actions](#module_util.object..actions)</code>
 Given a target, operate using [actions](#module_util.object..actions)
 
 **Kind**: static method of <code>[util](#module_util)</code>  
@@ -198,17 +198,13 @@ Given a target, operate using [actions](#module_util.object..actions)
 
 <a name="module_util.object..actions"></a>
 
-### object~actions
+#### object~actions
 Available actions for the target object.
 
 **Kind**: inner class of <code>[object](#module_util.object)</code>  
-
-* [~actions](#module_util.object..actions)
-    * [.merge(...reference)](#module_util.object..actions+merge) ⇒ <code>object</code>
-
 <a name="module_util.object..actions+merge"></a>
 
-#### actions.merge(...reference) ⇒ <code>object</code>
+##### actions.merge(...reference) ⇒ <code>object</code>
 Recursively merge reference(s) with target.
 
 **Kind**: instance method of <code>[actions](#module_util.object..actions)</code>  
@@ -220,7 +216,7 @@ Recursively merge reference(s) with target.
 
 <a name="module_util.string"></a>
 
-## util.string(target) ⇒ <code>[actions](#module_util.string..actions)</code>
+### util.string(target) ⇒ <code>[actions](#module_util.string..actions)</code>
 String utilities for feliz.util
 
 **Kind**: static method of <code>[util](#module_util)</code>  
@@ -242,17 +238,13 @@ const ops = str('hello world');
 
 <a name="module_util.string..actions"></a>
 
-### string~actions
+#### string~actions
 Actions to be applied to given string target.
 
 **Kind**: inner class of <code>[string](#module_util.string)</code>  
-
-* [~actions](#module_util.string..actions)
-    * [.template(context)](#module_util.string..actions+template)
-
 <a name="module_util.string..actions+template"></a>
 
-#### actions.template(context)
+##### actions.template(context)
 Allows given string to be converted according to a context.
 
 **Kind**: instance method of <code>[actions](#module_util.string..actions)</code>  
