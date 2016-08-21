@@ -1,7 +1,7 @@
 {
   "name": "feliz.util",
-  "version": "0.0.21",
-  "description": "Various (standalone) utilities for feliz.js projects",
+  "version": "0.1.0-beta.21",
+  "description": "Various (standalone) utilities that work great for feliz.js projects",
   "main": "lib/index.js",
   "author": "Héctor Menéndez <etor@gik.mx>",
   "license": "MIT",
@@ -25,6 +25,7 @@
   "scripts": {
     "start": "nodemon ./test/**/*.js -x 'npm run docs && npm run debug -s' -w ./lib -w ./test | tap-spec",
     "docs": "jsdoc2md -t ./template.hbs 'lib/**/*.js' > README.md",
+    "postdocs": "git add --force README.md",
     "test": "tape ./test/**/*.js | tap-spec",
     "debug": "node-debug --cli --no-debug-brk --debug-port 5900 --web-port 9900 --save-live-edit --no-preload",
     "debug:watch": "nodemon ./test/**/*.js -x 'npm run debug -s' -w ./lib -w ./test | tap-spec",
@@ -32,7 +33,8 @@
     "cover:check": "npm run cover:stats && istanbul check-coverage",
     "cover:stats": "istanbul cover tape -- ./test/**/*.js",
     "cover:send": "cat ./coverage/lcov.info | coveralls",
-    "precommit": "npm test && npm run cover:check && npm run docs && git add --force ./README.md && feliz.hooks pre-commit"
+    "postversion": "git add package.json",
+    "precommit": "npm test && npm run cover:check && npm run docs && npm version prerelease --no-git-tag-version"
   },
   "dependencies": {
     "feliz.error": "0.0.4",
@@ -41,10 +43,10 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.12",
-    "feliz.hooks": "0.0.5",
     "husky": "^0.11.6",
-    "istanbul": "^0.4.4",
+    "istanbul": "^0.4.5",
     "jsdoc-to-markdown": "^1.3.7",
+    "nodemon": "^1.10.2",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0"
   }
