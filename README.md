@@ -20,6 +20,8 @@ Various utilities ready to use for any project, but if you use
             * [.function()](#module_util.is..checkers+function) ⇒ <code>boolean</code>
             * [.null()](#module_util.is..checkers+null) ⇒ <code>boolean</code>
             * [.undefined()](#module_util.is..checkers+undefined) ⇒ <code>boolean</code>
+            * [.arrayish()](#module_util.is..checkers+arrayish) ⇒ <code>boolean</code>
+            * [.objectish()](#module_util.is..checkers+objectish) ⇒ <code>boolean</code>
     * [.object(target)](#module_util.object) ⇒ <code>[actions](#module_util.object..actions)</code>
         * [~actions](#module_util.object..actions)
             * [.merge(...reference)](#module_util.object..actions+merge) ⇒ <code>object</code>
@@ -57,6 +59,8 @@ if (is(str).string()) console.log(str); // will log 'hello world'
         * [.function()](#module_util.is..checkers+function) ⇒ <code>boolean</code>
         * [.null()](#module_util.is..checkers+null) ⇒ <code>boolean</code>
         * [.undefined()](#module_util.is..checkers+undefined) ⇒ <code>boolean</code>
+        * [.arrayish()](#module_util.is..checkers+arrayish) ⇒ <code>boolean</code>
+        * [.objectish()](#module_util.is..checkers+objectish) ⇒ <code>boolean</code>
 
 <a name="module_util.is..checkers"></a>
 
@@ -75,6 +79,8 @@ Available type-checkers for given target.
     * [.function()](#module_util.is..checkers+function) ⇒ <code>boolean</code>
     * [.null()](#module_util.is..checkers+null) ⇒ <code>boolean</code>
     * [.undefined()](#module_util.is..checkers+undefined) ⇒ <code>boolean</code>
+    * [.arrayish()](#module_util.is..checkers+arrayish) ⇒ <code>boolean</code>
+    * [.objectish()](#module_util.is..checkers+objectish) ⇒ <code>boolean</code>
 
 <a name="module_util.is..checkers+object"></a>
 
@@ -131,6 +137,40 @@ is(new Array()).array() // true
 
 #### checkers.undefined() ⇒ <code>boolean</code>
 **Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
+<a name="module_util.is..checkers+arrayish"></a>
+
+#### checkers.arrayish() ⇒ <code>boolean</code>
+An array, but not strictly an array.
+
+**Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
+**Example**  
+```js
+const ex1 = [];
+const ex2 = new Array();
+const ex3 = new (class Test extends Array {});
+const is = require('feliz.util/is');
+// prints: true true false
+console.log(is(ex1).array(), is(ex2).array(), is(ex3).array())
+// prints: true true true
+console.log(is(ex1).arrayish(), is(ex2).arrayish(), is(ex3).arrayish())
+```
+<a name="module_util.is..checkers+objectish"></a>
+
+#### checkers.objectish() ⇒ <code>boolean</code>
+An object, but not strictly an object.
+
+**Kind**: instance method of <code>[checkers](#module_util.is..checkers)</code>  
+**Example**  
+```js
+const ex1 = {};
+const ex2 = new Object();
+const ex3 = new (class Test extends Object {});
+const is = require('feliz.util/is');
+// prints: true true false
+console.log(is(ex1).object(), is(ex2).object(), is(ex3).object())
+// prints: true true true
+console.log(is(ex1).objectish(), is(ex2).objectish(), is(ex3).objectish())
+```
 <a name="module_util.object"></a>
 
 ## util.object(target) ⇒ <code>[actions](#module_util.object..actions)</code>
