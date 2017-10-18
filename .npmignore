@@ -1,4 +1,6 @@
 test
-src
+doc-src
 packages
+lib/*
+!lib/index.*
 
