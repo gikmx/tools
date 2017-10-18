@@ -1,0 +1,42 @@
+[submodule "thrower"]
+	path = packages/thrower
+	url = ../tools-thrower
+	branch = master
+[submodule "checker"]
+	path = packages/checker
+	url = ../tools-checker
+	branch = master
+[submodule "logger"]
+	path = packages/logger
+	url = ../tools-logger
+	branch = master
+[submodule "streamer"]
+	path = packages/streamer
+	url = ../tools-streamer
+	branch = master
+[submodule "populator"]
+	path = packages/populator
+	url = ../tools-populator
+	branch = master
+[submodule "mapper"]
+	path = packages/mapper
+	url = ../tools-mapper
+	branch = master
+[submodule "packages/thrower"]
+	path = packages/thrower
+	url = ../tools-thrower
+[submodule "packages/checker"]
+	path = packages/checker
+	url = ../tools-checker
+[submodule "packages/logger"]
+	path = packages/logger
+	url = ../tools-logger
+[submodule "packages/streamer"]
+	path = packages/streamer
+	url = ../tools-streamer
+[submodule "packages/populator"]
+	path = packages/populator
+	url = ../tools-populator
+[submodule "packages/mapper"]
+	path = packages/mapper
+	url = ../tools-mapper
