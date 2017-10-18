@@ -1,6 +1,6 @@
 {
     "name": "@gik/tools",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Meta package for GIK's toolbelt",
     "license": "MIT",
     "contributors": [
@@ -33,7 +33,8 @@
         "ver:commit": "gik-npm version:patch",
         "docs:lint": "gik-npm docs:lint",
         "docs": "npm run docs:lint -s && gik-npm docs",
-        "build": "gik-npm build"
+        "build": "git submodule foreach 'npm i && npm run build -s && npm run test -s'",
+        "prePublishOnly": "npm run docs -s"
     },
     "dependencies": {
         "@gik/tools-checker": "0.0.8",
