@@ -1,0 +1,14 @@
+{
+    "ecmaVersion": 8,
+    "libs": [
+        "ecmaScript"
+    ],
+    "loadEagerly": [
+        "./src/**/*.js"
+    ],
+    "plugin": {
+        "doc_comment": {},
+        "es_modules": {},
+        "node": {}
+    }
+}

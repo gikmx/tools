@@ -1,8 +1,0 @@
-language: node_js
-node_js:
-- 6.2
-env:
-- NODE_ENV=production
-before_script: npm i istanbul tape coveralls
-script: npm run cover:stats
-after_script: npm run cover:send
