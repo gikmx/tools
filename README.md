@@ -1,4 +1,4 @@
-# [@gik/tools](https://github.com/gikmx/tools#readme) *0.2.1*
+# [@gik/tools](https://github.com/gikmx/tools#readme) *0.2.2*
 > Meta package for GIK's toolbelt
 
 ## Contributors

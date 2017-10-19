@@ -1,6 +1,6 @@
 {
     "name": "@gik/tools",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Meta package for GIK's toolbelt",
     "license": "MIT",
     "contributors": [
@@ -42,7 +42,7 @@
         "@gik/tools-logger": "0.0.4",
         "@gik/tools-mapper": "0.0.3",
         "@gik/tools-populator": "0.0.2",
-        "@gik/tools-streamer": "0.0.4",
+        "@gik/tools-streamer": "0.0.5",
         "@gik/tools-thrower": "^0.1.9"
     },
     "devDependencies": {
