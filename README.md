@@ -1,5 +1,5 @@
-# [@gik/tools](https://github.com/gikmx/tools) *0.2.4*
-> Meta package for GIK's [tools](https://github.com/search?q=tools+user%3Agikmx)
+# [@gik/tools](http://gik.mx) *0.2.4*
+> A [tools suite](https://github.com/search?q=tools+user%3Agikmx) for Node / Javascript development.
 
 ##### Contributors
 - [Héctor Menéndez](mailto:hector@gik.mx) []()
@@ -9,7 +9,7 @@
 - linux
 
 #### <a name="table-of-contents"></a> Table of contents
-- **[thrower](#thrower)** Throws an exception with easier to read and colored stack trace and
+- **[thrower](#thrower)** Errors with pretty stack and customizable name.
 - **[streamer](#streamer)** An utility belt for our most common operations with RXJS's Observables.
   - **[fromAccess](#streamer.fromAccess)** `member` Determine if given path is accessible.
   - **[fromStat](#streamer.fromStat)** `member` Determine statistics about a file system node.
@@ -24,8 +24,8 @@
 - **[populator](#populator)** Allows properties in an object to inherit values from sibling properties.
 - **[mapper](#mapper)** Generates a flattened object containing a map for all the properties
 - **[logger](#logger)** A wrapper around [pino](http://getpino.io).
-- **[checker](#checker)** Gives you tools and shortcuts to determine typings.
-  - **[is](#checker.is)** Determine if given value really belongs to a _primitive type__.
+- **[checker](#checker)** A minimal type-checker for JavaScript purists.
+  - **[is](#checker.is)** Determine if given value really belongs to the corresponding type.
     - **[objectEmpty](#checker.is.objectEmpty)** `member` Determine if an element is an object and has no keys
     - **[string](#checker.is.string)** `member` Determines if `value` is really a string.
     - **[number](#checker.is.number)** `member` Determines if `value` is really a number.
@@ -39,8 +39,9 @@
 
 # <a name="thrower"></a> thrower
 
-Throws an exception with easier to read and colored stack trace and
-customizable name.
+Errors with pretty stack and customizable name.
+> - [Standalone version](https://github.com/gikmx/tools-streamer).
+> - [Report a Bug](https://github.com/gikmx/tools-streamer/issues).
 
 ###### Parameters
 <table>
@@ -93,10 +94,12 @@ const Err = Thrower('bad boy', 'CanineError', false); // Returns CanineError ins
 # <a name="streamer"></a> streamer
 
 An utility belt for our most common operations with RXJS's Observables.
+> - [Standalone version](https://github.com/gikmx/tools-streamer).
+> - [Report a Bug](https://github.com/gikmx/tools-streamer/issues).
 
 
 ###### To do
-- [ ] Add unit tests for all methods.
+- [ ] Add unit tests for all operators.
 
 
 ###### Members
@@ -395,6 +398,8 @@ Writes a file on the disk.
 # <a name="server"></a> server
 
 A minimal webserver using [RxJS Observables](https://github.com/reactivex/rxjs).
+> - [Standalone version](https://github.com/gikmx/tools-streamer).
+> - [Report a Bug](https://github.com/gikmx/tools-streamer/issues).
 
 ###### Parameters
 <table>
@@ -490,6 +495,8 @@ a subscription would be returned, otherwise an observable is returned.</span>
 
 Allows properties in an object to inherit values from sibling properties.
 This specially useful when creating JSON configuration files.
+> - [Standalone version](https://github.com/gikmx/tools-streamer).
+> - [Report a Bug](https://github.com/gikmx/tools-streamer/issues).
 
 ###### Parameters
 <table>
@@ -528,6 +535,8 @@ const result = Populator(subject);
 
 Generates a flattened object containing a map for all the properties
 available on `subject`.
+> - [Standalone version](https://github.com/gikmx/tools-mapper).
+> - [Report a Bug](https://github.com/gikmx/tools-mapper/issues).
 
 ###### Parameters
 <table>
@@ -573,6 +582,8 @@ const result = Mapper(subject);
 # <a name="logger"></a> logger
 
 A wrapper around [pino](http://getpino.io).
+> - [Standalone version](https://github.com/gikmx/tools-logger).
+> - [Report a Bug](https://github.com/gikmx/tools-logger/issues).
 
 ###### Behaviour
 - When the environment is *non-production* it will output prettier logs.
@@ -635,7 +646,9 @@ supported levels are, check out <a href="#logger.Instance">logger.Instance</a> f
 
 # <a name="checker"></a> checker
 
-Gives you tools and shortcuts to determine typings.
+A minimal type-checker for JavaScript purists.
+> - [Standalone version](https://github.com/gikmx/tools-checker).
+> - [Report a Bug](https://github.com/gikmx/tools-checker/issues).
 
 
 ###### Members
@@ -649,7 +662,7 @@ Gives you tools and shortcuts to determine typings.
 
 ## <a name="checker.is"></a> is
 
-Determine if given value really belongs to a _primitive type__.
+Determine if given value really belongs to the corresponding type.
 
 
 ###### Members

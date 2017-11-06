@@ -1,9 +1,9 @@
 {
     "name": "@gik/tools",
     "version": "0.2.4",
-    "description": "Meta package for GIK's [tools](https://github.com/search?q=tools+user%3Agikmx)",
+    "description": "A [tools suite](https://github.com/search?q=tools+user%3Agikmx) for Node / Javascript development.",
     "license": "MIT",
-    "homepage": "https://github.com/gikmx/tools",
+    "homepage": "http://gik.mx",
     "contributors": [
         "Héctor Menéndez <hector@gik.mx>"
     ],
