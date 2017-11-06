@@ -1,10 +1,12 @@
 # [@gik/tools](https://github.com/gikmx/tools) *0.2.3*
-> Meta package for GIK's toolbelt
+> Meta package for GIK's [tools](https://github.com/search?q=tools+user%3Agikmx)
 
 ##### Contributors
 - [Héctor Menéndez](mailto:hector@gik.mx) []()
 
 ##### Supported platforms
+- darwin
+- linux
 
 #### <a name="table-of-contents"></a> Table of contents
 - **[thrower](#thrower)** Throws an exception with easier to read and colored stack trace and

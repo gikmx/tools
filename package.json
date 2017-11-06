@@ -1,7 +1,7 @@
 {
     "name": "@gik/tools",
     "version": "0.2.3",
-    "description": "Meta package for GIK's toolbelt",
+    "description": "Meta package for GIK's [tools](https://github.com/search?q=tools+user%3Agikmx)",
     "license": "MIT",
     "homepage": "https://github.com/gikmx/tools",
     "contributors": [
@@ -24,6 +24,10 @@
         "node": ">=6.11.3",
         "npm": ">=5.4.2"
     },
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "main": "lib/index.js",
     "directories": {
         "test": "./__tests__",
