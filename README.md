@@ -1,4 +1,4 @@
-# [@gik/tools](https://github.com/gikmx/tools) *0.2.3*
+# [@gik/tools](https://github.com/gikmx/tools) *0.2.4*
 > Meta package for GIK's [tools](https://github.com/search?q=tools+user%3Agikmx)
 
 ##### Contributors
@@ -513,10 +513,11 @@ const subject = {
     a: { b: { c: 'world' } },
     d: "hello ${a.b.c}${e}",
     e: "!!!",
+    f: ["${e}", "${a.b.c}"]
 };
 const result = Populator(subject);
 // result:
-// { a: { b: { c: 'world' } }, d: "hello world!!!", e: "!!!" };
+// { a: { b: { c: 'world' } }, d: "hello world!!!", e: "!!!", f: ["!!!", "world"] };
 ```
 
 <small>**[▲ Top](#table-of-contents)**</small>
