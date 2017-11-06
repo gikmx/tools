@@ -1,10 +1,11 @@
 {
     "name": "@gik/tools",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "Meta package for GIK's toolbelt",
     "license": "MIT",
+    "homepage": "https://github.com/gikmx/tools",
     "contributors": [
-        "Héctor Menéndez <hector@gik.mx> (http://hectormenendez.com)"
+        "Héctor Menéndez <hector@gik.mx>"
     ],
     "keywords": [
         "tools",
@@ -25,29 +26,29 @@
     },
     "main": "lib/index.js",
     "directories": {
-        "test": "./test",
-        "src": "./doc-src",
+        "test": "./__tests__",
+        "src": "./src",
         "out": "./lib"
     },
     "scripts": {
-        "ver": "gik-npm version",
-        "docs": "gik-npm docs lint && gik-npm docs",
-        "build:all": "git submodule foreach 'npm i && npm run build -s && npm run test -s'",
-        "build": "gik-npm build",
-        "precommit": "gik-npm version patch && npm run docs -s",
-        "prePublishOnly": "gik-npm build && npm run docs -s"
+        "test": "gik-npm lint test && gik-npm test",
+        "build": "gik-npm lint src && gik-npm build",
+        "verify": "npm run build -s && npm run test -s",
+        "start": "gik-npm start 'npm run verify'",
+        "pub": "npm run verify -s && npm publish --access public --tag",
+        "precommit": "npm run verify -s && gik-npm version patch && gik-npm docs"
     },
-    "dependencies": {
-        "@gik/tools-checker": "0.0.8",
-        "@gik/tools-logger": "0.0.4",
-        "@gik/tools-mapper": "0.0.3",
-        "@gik/tools-populator": "0.0.2",
-        "@gik/tools-streamer": "0.0.5",
-        "@gik/tools-thrower": "^0.1.9"
-    },
+    "dependencies": {},
     "devDependencies": {
-        "@gik/eslint-config": "0.0.3",
-        "@gik/npm": "0.0.31",
-        "nodemon": "^1.12.1"
+        "@gik/eslint-config": "0.0.4",
+        "@gik/npm": "^0.1.10"
+    },
+    "@gik/npm": {
+        "babel": {
+            "comments": true
+        },
+        "jsdoc": {
+            "files": "./lib/**/*.js"
+        }
     }
 }

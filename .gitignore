@@ -4,3 +4,5 @@ node_modules
 coverage
 .DS_*
 lib
+coverage
+.tern-port

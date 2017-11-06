@@ -40,3 +40,7 @@
 [submodule "packages/mapper"]
 	path = packages/mapper
 	url = ../tools-mapper
+[submodule "server"]
+	path = packages/server
+	url = ../tools-server
+	branch = master

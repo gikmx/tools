@@ -1,3 +1,6 @@
 {
-    "extends": "@gik"
+    "extends": "@gik",
+    "rules": {
+        "object-curly-newline": "off"
+    }
 }
