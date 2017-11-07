@@ -1,4 +1,4 @@
-# [@gik/tools](http://gik.mx) *0.2.4*
+# [@gik/tools](http://gik.mx) *0.2.5*
 > A [tools suite](https://github.com/search?q=tools+user%3Agikmx) for Node / Javascript development.
 
 ##### Contributors
